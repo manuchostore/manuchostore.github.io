@@ -36,11 +36,10 @@
             color: #fff;
             font-size: 2rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            position: relative;
         }
 
         .banner-text {
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
             padding: 0.5rem 1rem;
             border-radius: 10px;
         }
@@ -69,11 +68,6 @@
             margin-top: 0.5rem;
         }
 
-        .shipping, .contact {
-            padding: 1rem;
-            text-align: center;
-        }
-
         footer {
             background-color: #000;
             color: #fff;
@@ -92,47 +86,49 @@
             text-decoration: underline;
         }
 
-        /* Modal de imagen */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
             z-index: 1;
-            padding-top: 100px;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
         }
 
         .modal-content {
-            margin: auto;
+            margin: 5% auto;
             display: block;
-            width: 80%;
+            width: 60%;
             max-width: 700px;
+            border-radius: 10px;
         }
 
         .modal-description {
             color: #fff;
-            text-align: center;
             font-size: 1.2rem;
-            padding: 10px;
+            text-align: center;
+            padding: 1rem;
             background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 15px;
+            border-radius: 10px;
         }
 
-        /* El botón de cierre del modal */
         .close {
             color: #fff;
             font-size: 30px;
             font-weight: bold;
             position: absolute;
-            top: 20px;
-            right: 35px;
-            background: none;
-            border: none;
+            top: 10px;
+            right: 25px;
             cursor: pointer;
+        }
+
+        .close:hover {
+            color: #f00;
         }
     </style>
 </head>
@@ -149,30 +145,21 @@
 
     <section class="gallery">
         <div class="product">
-            <img src="nike.jpg" alt="Producto 1" onclick="openModal('nike.jpg', 'Air Force Nike<br>Precio: $55,000<br>Características: Confort, diseño premium, ideal para uso diario.')">
+            <img src="nike.jpg" alt="Air Force Nike" onclick="openModal('nike.jpg', 'Air Force Nike', 'Precio: $55,000<br>Un clásico para cada ocasión, con estilo inigualable y comodidad máxima.')">
             <p>Air Force Nike</p>
-            <p><strong>Precio: $55,000</strong></p>
         </div>
         <div class="product">
-            <img src="ribuk.jpg" alt="Producto 2" onclick="openModal('ribuk.jpg', 'Reebok Classic<br>Precio: $55,000<br>Características: Comodidad, durabilidad, estilo versátil.')">
+            <img src="ribuk.jpg" alt="Reebok Classic" onclick="openModal('ribuk.jpg', 'Reebok Classic', 'Precio: $55,000<br>Revive la esencia de los 80s con estas zapatillas icónicas.')">
             <p>Reebok Classic</p>
-            <p><strong>Precio: $55,000</strong></p>
         </div>
         <div class="product">
-            <img src="canus.jpg" alt="Producto 3" onclick="openModal('canus.jpg', 'Canus Deluxe<br>Precio: $55,000<br>Características: Elegancia y confort en cada paso.')">
+            <img src="canus.jpg" alt="Canus Deluxe" onclick="openModal('canus.jpg', 'Canus Deluxe', 'Precio: $55,000<br>Perfectas para tu look casual, cómodas y llenas de estilo.')">
             <p>Canus Deluxe</p>
-            <p><strong>Precio: $55,000</strong></p>
         </div>
         <div class="product">
-            <img src="rosita.jpg" alt="Producto 4" onclick="openModal('rosita.jpg', 'Rosita Sneakers<br>Precio: $55,000<br>Características: Diseño único, ideal para cualquier ocasión.')">
+            <img src="rosita.jpg" alt="Rosita Sneakers" onclick="openModal('rosita.jpg', 'Rosita Sneakers', 'Precio: $55,000<br>Para quienes aman destacar con estilo y frescura.')">
             <p>Rosita Sneakers</p>
-            <p><strong>Precio: $55,000</strong></p>
         </div>
-    </section>
-
-    <section class="shipping">
-        <h2>Métodos de Envío</h2>
-        <p>Esas son reebok o son nike.</p>
     </section>
 
     <footer>
@@ -188,10 +175,10 @@
     </div>
 
     <script>
-        function openModal(image, description) {
+        function openModal(image, title, description) {
             document.getElementById("myModal").style.display = "block";
             document.getElementById("modalImage").src = image;
-            document.getElementById("modalDescription").innerHTML = description;
+            document.getElementById("modalDescription").innerHTML = `<strong>${title}</strong><br>${description}`;
         }
 
         function closeModal() {
