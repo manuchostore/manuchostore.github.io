@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manucho Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .banner {
+            background-image: url('banner.jpg'); /* Cambia "banner.jpg" por tu imagen */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .shipping, .contact {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manucho Store</h1>
+    </header>
+
+    <div class="banner">
+        <p>Zapatillas Premium desde Brasil</p>
+    </div>
+
+    <section class="gallery">
+        <img src="product1.jpg" alt="Producto 1">
+        <img src="product2.jpg" alt="Producto 2">
+        <img src="product3.jpg" alt="Producto 3">
+        <img src="product4.jpg" alt="Producto 4">
+    </section>
+
+    <section class="shipping">
+        <h2>Métodos de Envío</h2>
+        <p>Ofrecemos envíos a todo el país con los mejores transportistas.</p>
+    </section>
+
+    <footer>
+        <a href="https://www.instagram.com/manuchostoree" target="_blank">Instagram</a>
+        <a href="https://wa.me/tu_numero_de_whatsapp" target="_blank">WhatsApp</a>
+    </footer>
+</body>
+</html>
